@@ -1,0 +1,302 @@
+/* ==========================
+        PAGE 17
+========================== */
+
+#page17{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    180deg,
+    #fff8fb,
+    #ffeef6,
+    #fffdfd);
+
+}
+
+/* ==========================
+      MAIN CONTAINER
+========================== */
+
+#storyContainer{
+
+    width:950px;
+
+    max-width:92%;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:55px;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.18);
+
+    max-height:90vh;
+
+overflow-y:auto;
+
+}
+
+/* ==========================
+          TITLE
+========================== */
+
+#storyTitle{
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:#ff4f8b;
+
+    margin-bottom:25px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+      MAIN WRITING
+========================== */
+
+#storyIntro{
+
+    min-height:260px;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#444;
+
+    text-align:center;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================
+         CHOICES
+========================== */
+
+#storyChoices{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:60px;
+
+    margin-top:40px;
+
+}
+
+.storyChoiceBox{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+/* ==========================
+          BUTTONS
+========================== */
+
+.storyChoiceBox button{
+
+    width:100%;
+
+    padding:18px 15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4f8b;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.storyChoiceBox button:hover{
+
+    transform:scale(1.05);
+
+}
+
+.storyChoiceBox button:disabled{
+
+    cursor:default;
+
+}
+
+/* ==========================
+    SMALL TEXT UNDER BUTTON
+========================== */
+
+.storyChoiceBox p{
+
+    margin-top:14px;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    color:#777;
+
+    white-space:pre-line;
+
+}
+/* ==========================
+        ANSWER
+========================== */
+
+#storyAnswer{
+
+    display:none;
+
+    margin-top:45px;
+
+    min-height:220px;
+
+    font-size:21px;
+
+    line-height:1.9;
+
+    color:#444;
+
+    text-align:center;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================
+      CONTINUE BUTTON
+========================== */
+
+#storyContinue{
+
+    display:none;
+
+    margin:45px auto 0;
+
+    padding:18px 60px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4f8b;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#storyContinue:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+        FADED BUTTON
+========================== */
+
+.storyDisabled{
+
+    opacity:.35;
+
+}
+
+/* ==========================
+      MOBILE FRIENDLY
+========================== */
+
+@media(max-width:900px){
+
+#storyContainer{
+
+    width:95%;
+
+    padding:35px;
+
+}
+
+#storyTitle{
+
+    font-size:34px;
+
+}
+
+#storyIntro{
+
+    font-size:18px;
+
+    min-height:220px;
+
+}
+
+#storyChoices{
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.storyChoiceBox button{
+
+    font-size:19px;
+
+}
+
+.storyChoiceBox p{
+
+    font-size:15px;
+
+}
+
+#storyAnswer{
+
+    font-size:18px;
+
+    min-height:180px;
+
+}
+
+#storyContinue{
+
+    width:100%;
+
+    font-size:20px;
+
+}
+
+}

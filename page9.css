@@ -1,0 +1,404 @@
+/* ==========================================
+   PAGE 9
+========================================== */
+
+#page9{
+    background:
+    radial-gradient(circle at center,
+    #9b0028 0%,
+    #7a001f 45%,
+    #430010 100%);
+}
+
+#heartContainer{
+
+    position:relative;
+
+    width:fit-content;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+#heartContainer h1{
+
+font-size:70px;
+
+color:white;
+
+text-shadow:
+
+0 0 15px #ff5f93,
+
+0 0 40px #ff3b7d,
+
+0 0 80px #ff1b68;
+
+animation:pulseTitle 2s infinite;
+
+}
+
+@keyframes pulseTitle{
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+}
+#heartContainer p{
+
+    color:#ffd6de;
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+}
+
+#heartCraft{
+
+    width:620px;
+
+    border-radius:20px;
+
+    border:10px solid white;
+
+     box-shadow:
+    0 30px 70px rgba(0,0,0,.45);
+
+    transition:.3s;
+
+}
+
+#heartCraft:hover{
+
+    transform:scale(1.03);
+
+}
+
+#pullRibbon{
+
+    position:absolute;
+
+    top:57%;
+
+    right:-250px;
+
+    transform:translateY(-50%);
+
+    width:220px;
+
+    height:70px;
+
+    border-radius:40px;
+
+}
+
+#pullRibbon::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:120px;
+
+    height:14px;
+
+    background:#c5223d;
+
+}
+#heartVideo{
+
+    display:none;
+
+    width:1100px;
+
+    max-width:92vw;
+
+    height:78vh;
+
+    object-fit:contain;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+}
+
+#continuePage9{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+}
+.heartFloat{
+
+    position:absolute;
+
+    font-size:35px;
+
+    animation:heartFloat 7s ease-in-out infinite;
+
+    opacity:.8;
+
+}
+
+.h1{top:10%;left:6%;}
+.h2{top:22%;right:8%;}
+.h3{bottom:12%;left:12%;}
+.h4{bottom:20%;right:9%;}
+.h5{top:55%;left:4%;}
+.h6{top:72%;right:18%;}
+
+@keyframes heartFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+.spark{
+
+position:absolute;
+
+color:#ffd56a;
+
+font-size:20px;
+
+animation:twinkle 2s infinite;
+
+}
+
+.s1{top:18%;left:22%;}
+.s2{top:65%;left:18%;}
+.s3{top:30%;right:18%;}
+.s4{bottom:18%;right:24%;}
+.s5{top:50%;right:10%;}
+
+@keyframes twinkle{
+
+50%{
+
+opacity:.2;
+
+transform:scale(.5);
+
+}
+
+}
+.petal{
+
+position:absolute;
+
+font-size:26px;
+
+animation:petal 10s linear infinite;
+
+}
+
+.p1{left:15%;}
+.p2{left:35%;animation-delay:2s;}
+.p3{left:58%;animation-delay:5s;}
+.p4{left:80%;animation-delay:1s;}
+
+@keyframes petal{
+
+0%{
+
+top:-60px;
+transform:rotate(0deg);
+
+}
+
+100%{
+
+top:110%;
+transform:rotate(360deg);
+
+}
+
+}
+.letter{
+
+position:absolute;
+
+top:30px;
+
+left:40px;
+
+font-size:55px;
+
+animation:bounce 3s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+.dove{
+
+position:absolute;
+
+font-size:34px;
+
+animation:fly 12s linear infinite;
+
+}
+
+.d1{
+
+top:15%;
+left:-80px;
+
+}
+
+.d2{
+
+top:22%;
+left:-250px;
+animation-delay:4s;
+
+}
+
+@keyframes fly{
+
+100%{
+
+transform:translateX(1600px);
+
+}
+
+}
+#loveGlow{
+
+position:absolute;
+
+width:320px;
+
+height:320px;
+
+background:#ff4d85;
+
+filter:blur(140px);
+
+opacity:.35;
+
+top:40px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+z-index:-1;
+
+}
+
+#heartBurst{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:0;
+    height:0;
+
+    pointer-events:none;
+
+}
+
+.burstHeart{
+
+    position:absolute;
+
+    font-size:22px;
+
+    opacity:1;
+
+    animation:burst .9s ease-out forwards;
+
+}
+
+@keyframes burst{
+
+    0%{
+
+        transform:translate(0,0) scale(.2);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translate(var(--x),var(--y)) scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+#heartBurst1,
+#heartBurst2,
+#heartBurst3,
+#heartBurst4,
+#heartBurst5{
+
+    position:absolute;
+    width:0;
+    height:0;
+    pointer-events:none;
+
+}
+
+#heartBurst1{
+    top:25%;
+    left:25%;
+}
+
+#heartBurst2{
+    top:25%;
+    right:25%;
+}
+
+#heartBurst3{
+    bottom:25%;
+    left:25%;
+}
+
+#heartBurst4{
+    bottom:25%;
+    right:25%;
+}
+
+#heartBurst5{
+    top:50%;
+    left:50%;
+}

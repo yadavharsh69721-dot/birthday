@@ -1,0 +1,823 @@
+/* ==========================================
+   PAGE 3
+========================================== */
+
+#page3{
+
+    background:
+    radial-gradient(circle at top,#262626 0%,#111111 45%,#050505 100%);
+
+    overflow:hidden;
+
+}
+/* ======================
+   INTRO
+====================== */
+
+#page3Intro{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+#page3Intro h1{
+
+    font-size:72px;
+
+    color:#d84f82;
+
+    margin-bottom:30px;
+
+}
+
+#page3Intro p{
+
+    max-width:750px;
+
+    font-size:26px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+#beginJourney{
+
+    margin-top:55px;
+
+    padding:22px 60px;
+
+    border:none;
+
+    border-radius:60px;
+
+    background:#ff4f8b;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#beginJourney:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(255,80,140,.35);
+
+}
+
+/* ======================
+   MAIN
+====================== */
+
+#page3Main{
+
+    display:none;
+
+    width:100%;
+    height:100%;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* ======================
+   TIMELINE
+====================== */
+
+#timelineWrapper{
+
+    width:95%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+#timeline{
+
+    flex:1;
+
+    display:flex;
+
+    gap:40px;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    padding:25px 10px;
+
+}
+
+#timeline::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.timelineHeart{
+
+    flex:0 0 auto;
+
+    width:130px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    cursor:pointer;
+
+}
+
+.heart{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+    color:#ff4f8b;
+
+    font-size:34px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.timelineHeart.active .heart{
+
+    background:#ff4f8b;
+
+    color:white;
+
+    transform:scale(1.25);
+
+    box-shadow:
+
+        0 0 20px #ff6fa5,
+
+        0 0 45px rgba(255,120,170,.5);
+
+}
+
+.timelineHeart.completed .heart{
+
+    background:#ff94ba;
+
+    color:white;
+
+}
+
+.timelineHeart span{
+
+    margin-top:12px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    color:#555;
+
+    line-height:1.4;
+
+}
+
+#timelineLeft,
+#timelineRight{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+/* ======================
+   MEMORY CARD
+====================== */
+
+#memoryCard{
+
+    display:none;
+
+    width:900px;
+
+    max-width:92%;
+
+    margin-top:35px;
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.memoryHeader{
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+#memoryTitle{
+
+    color:#d84f82;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+#memoryDate{
+
+    color:#888;
+
+    font-size:18px;
+
+}
+
+#photoContainer{
+
+    position:relative;
+
+    width:100%;
+
+    height:520px;
+
+    overflow:hidden;
+
+    background:#ececec;
+
+}
+
+#memoryImage{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+#fog{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.35);
+
+}
+
+#fog::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-50%;
+
+    background:
+    radial-gradient(circle,rgba(255,255,255,.75),transparent 60%);
+
+    filter:blur(45px);
+
+    animation:fogMove 16s linear infinite;
+
+    pointer-events:none;
+
+}
+.fogContent{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+@keyframes fogMove{
+
+    from{
+
+        transform:translateX(-10%) translateY(-5%);
+
+    }
+
+    to{
+
+        transform:translateX(10%) translateY(5%);
+
+    }
+
+}
+.fogContent{
+
+    text-align:center;
+
+}
+
+.fogContent h3{
+
+    color:#555;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+#revealMemory{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4f8b;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.memoryFooter{
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+#memoryText{
+
+    font-size:21px;
+
+    color:#555;
+
+    line-height:1.8;
+
+    opacity:0;
+
+}
+
+#nextMemory,
+#continueJourney{
+
+    display:none;
+
+    margin-top:35px;
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4f8b;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+#page3Particles{
+
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:rgba(255,120,170,.25);
+
+    animation:floatParticle linear infinite;
+
+}
+
+@keyframes floatParticle{
+
+    from{
+
+        transform:translateY(100vh);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+#revealMemory,
+#nextMemory,
+#continueJourney{
+
+    background:
+
+    linear-gradient(135deg,#ff5c97,#ff89b5);
+
+    color:white;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    transition:.35s;
+
+}
+
+#revealMemory:hover,
+#nextMemory:hover,
+#continueJourney:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 15px 35px rgba(255,90,150,.4);
+
+}
+#memoryCard{
+
+    animation:memoryAppear .8s cubic-bezier(.2,.9,.2,1);
+
+}
+
+@keyframes memoryAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(70px)
+
+            scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+.sparkle{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:#FFD86B;
+
+    box-shadow:0 0 12px #FFD86B;
+
+    animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(2);
+
+    }
+
+}
+.heart{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#ff6d9d;
+
+    backdrop-filter:blur(20px);
+
+}
+
+.timelineHeart.active .heart{
+
+    background:#ff4f8b;
+
+    box-shadow:
+
+    0 0 25px #ff4f8b,
+
+    0 0 60px rgba(255,79,139,.5);
+
+}
+#revealMemory{
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #D4AF37,
+
+    #F8E38A
+
+    );
+
+    color:black;
+
+}
+#fog{
+
+    background:
+
+    rgba(0,0,0,.45);
+
+}
+#moon{
+
+    position:absolute;
+
+    top:60px;
+
+    right:90px;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    background:#fff8dc;
+
+    box-shadow:
+        0 0 30px rgba(255,248,220,.8),
+        0 0 70px rgba(255,248,220,.4);
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+#moon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:#111;
+
+    right:-25px;
+
+    top:10px;
+
+}
+#stars{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.star{
+
+    position:absolute;
+
+    width:2px;
+
+    height:2px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 0 8px white;
+
+    animation:twinkle infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(2);
+
+    }
+
+}
+#page3Intro,
+#page3Main{
+
+    position:relative;
+
+    z-index:5;
+
+}
+/* ==========================
+   SHOOTING STAR
+========================== */
+
+.shootingStar{
+
+    position:absolute;
+
+    width:320px;
+
+    height:4px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,1),
+        rgba(255,255,255,.9),
+        rgba(255,255,255,.5),
+        transparent
+    );
+
+    box-shadow:
+        0 0 8px white,
+        0 0 18px white,
+        0 0 35px rgba(255,255,255,.8);
+
+    pointer-events:none;
+
+    z-index:3;
+
+    transform:rotate(-35deg);
+
+    animation:shootStar 1.8s linear forwards;
+
+}
+
+@keyframes shootStar{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translate(0,0)
+            rotate(-35deg)
+            scale(.6);
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translate(-1200px,1200px)
+            rotate(-35deg)
+            scale(1.2);
+
+    }
+
+}

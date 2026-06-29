@@ -1,0 +1,388 @@
+
+/* ==========================================
+   PAGE 1
+========================================== */
+
+#page1{
+
+    background:linear-gradient(
+        135deg,
+        #ff4d8d 0%,
+        #ff74a6 30%,
+        #ffb3c7 65%,
+        #ffd6e0 100%
+    );
+
+}
+
+#page1 .content{
+
+    position:relative;
+
+    z-index:10;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+#page1 h1{
+
+    color:white;
+
+    font-size:82px;
+
+    letter-spacing:6px;
+
+    text-shadow:
+        0 0 12px white,
+        0 0 30px #ff6fae,
+        0 0 55px #ff9cc6;
+
+    animation:titleDrop 1.6s ease forwards;
+
+}
+
+#page1 h2{
+
+    margin-top:20px;
+
+    color:white;
+
+    font-size:42px;
+
+    text-shadow:0 0 15px white;
+
+}
+
+#page1 .nextBtn{
+
+    margin-top:70px;
+
+    padding:18px 60px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#ff2d75;
+
+    transition:.35s;
+
+}
+
+#page1 .nextBtn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 30px white;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes titleDrop{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(-120px)
+            scale(.7);
+
+    }
+
+    70%{
+
+        opacity:1;
+
+        transform:
+            translateY(15px)
+            scale(1.05);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+/* ---------- PAGE 1 BALLOONS ---------- */
+
+#page1 .balloons{
+
+    position:absolute;
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+#page1 .balloons span{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    width:70px;
+    height:90px;
+
+    border-radius:50%;
+
+    animation:balloonFloat linear infinite;
+
+}
+
+#page1 .balloons span::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+
+    height:60px;
+
+    background:white;
+
+    top:90px;
+
+    left:50%;
+
+}
+
+#page1 .balloons span:nth-child(1){
+    left:5%;
+    background:#ff4d6d;
+    animation-duration:10s;
+}
+
+#page1 .balloons span:nth-child(2){
+    left:18%;
+    background:#ffd166;
+    animation-duration:12s;
+}
+
+#page1 .balloons span:nth-child(3){
+    left:30%;
+    background:#4cc9f0;
+    animation-duration:9s;
+}
+
+#page1 .balloons span:nth-child(4){
+    left:44%;
+    background:#b5179e;
+    animation-duration:11s;
+}
+
+#page1 .balloons span:nth-child(5){
+    left:58%;
+    background:#06d6a0;
+    animation-duration:10s;
+}
+
+#page1 .balloons span:nth-child(6){
+    left:72%;
+    background:#f72585;
+    animation-duration:13s;
+}
+
+#page1 .balloons span:nth-child(7){
+    left:86%;
+    background:#f77f00;
+    animation-duration:9s;
+}
+
+#page1 .balloons span:nth-child(8){
+    left:95%;
+    background:#4361ee;
+    animation-duration:12s;
+}
+@keyframes balloonFloat{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-130vh);
+
+    }
+
+}
+/* ---------- PAGE 1 FIREWORKS ---------- */
+
+#page1 #fireworksCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+#page1 .balloons{
+    z-index:2;
+}
+
+#page1 .content{
+    z-index:5;
+}
+/* ---------- PAGE 1 HEARTS ---------- */
+
+.heart{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    font-size:28px;
+
+    transform:translate(-50%,-50%);
+
+    animation:heartFloat 1s linear forwards;
+
+    z-index:9999;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+            translate(-50%,-140px)
+            scale(2);
+
+    }
+
+}
+#goofyPics{
+
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+}
+
+.goofyPic{
+
+    position:absolute;
+    width:180px;
+
+    border:6px solid white;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.pic1{
+
+    top:60px;
+    left:60px;
+
+    animation:float1 4s ease-in-out infinite;
+
+}
+
+.pic2{
+
+    top:90px;
+    right:70px;
+
+    animation:float2 5s ease-in-out infinite;
+
+}
+
+.pic3{
+
+    bottom:90px;
+    left:120px;
+
+    animation:float3 4.5s ease-in-out infinite;
+
+}
+
+.pic4{
+
+    bottom:70px;
+    right:120px;
+
+    animation:float4 5.5s ease-in-out infinite;
+
+}
+
+@keyframes float1{
+
+0%,100%{transform:rotate(-12deg) translateY(0);}
+50%{transform:rotate(-12deg) translateY(-10px);}
+
+}
+
+@keyframes float2{
+
+0%,100%{transform:rotate(10deg) translateY(0);}
+50%{transform:rotate(10deg) translateY(-10px);}
+
+}
+
+@keyframes float3{
+
+0%,100%{transform:rotate(8deg) translateY(0);}
+50%{transform:rotate(8deg) translateY(-10px);}
+
+}
+
+@keyframes float4{
+
+0%,100%{transform:rotate(-10deg) translateY(0);}
+50%{transform:rotate(-10deg) translateY(-10px);}
+
+}

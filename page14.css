@@ -1,0 +1,434 @@
+#page14{
+
+    position:absolute;
+    inset:0;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
+    url("images/altar.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    box-shadow:
+inset 0 0 180px rgba(255,215,140,.18);
+
+}
+
+#page14::after{
+
+content:"";
+
+position:absolute;
+
+inset:-30%;
+
+background:
+radial-gradient(circle,
+rgba(255,255,255,.18),
+transparent 60%);
+
+animation:lightMove 18s linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes lightMove{
+
+0%{
+
+transform:translate(-15%,-10%);
+
+}
+
+50%{
+
+transform:translate(15%,10%);
+
+}
+
+100%{
+
+transform:translate(-15%,-10%);
+
+}
+
+}
+
+/* Title */
+
+#proposalTitle{
+
+animation:titleGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes titleGlow{
+
+0%,100%{
+
+text-shadow:
+
+0 0 18px white,
+0 0 35px rgba(255,255,255,.3);
+
+}
+
+50%{
+
+text-shadow:
+
+0 0 35px white,
+0 0 70px rgba(255,255,255,.6);
+
+}
+
+}
+/* Boy */
+
+#boy{
+
+    position:absolute;
+
+    bottom:70px;
+
+    left:28%;
+
+    width:190px;
+
+    z-index:15;
+
+    transition:2s ease;
+
+    
+
+}
+
+/* Girl */
+
+#girl{
+
+    position:absolute;
+
+    bottom:70px;
+
+    right:28%;
+
+    width:190px;
+
+    z-index:15;
+
+    transition:2s ease;
+
+}
+
+/* Buttons */
+
+#proposalButtons{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:25px;
+
+    z-index:25;
+
+}
+
+
+#proposalButtons button{
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.2);
+
+transition:.25s;
+
+}
+
+#proposalButtons button:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+}
+#yesBride{
+
+    background:#ff4f8b;
+
+    color:white;
+
+}
+
+#noBride{
+
+    background:white;
+
+}
+
+/* Popup */
+
+#proposalPopup{
+
+    position:fixed;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+    display:none;
+
+    text-align:center;
+
+    z-index:1000;
+
+}
+
+#proposalPopup button{
+
+    margin-top:20px;
+
+    padding:12px 35px;
+
+}
+
+/* Continue */
+
+#continuePage14{
+
+position:absolute;
+
+right:20px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+display:none;
+
+z-index:999;
+
+}
+#proposalHeart{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:290px;
+
+    transform:translateX(-50%);
+
+    font-size:90px;
+
+    animation:heartPop .6s ease;
+
+    z-index:100;
+
+}
+
+@keyframes heartPop{
+
+    0%{
+
+        transform:translateX(-50%) scale(.2);
+
+        opacity:0;
+
+    }
+
+    70%{
+
+        transform:translateX(-50%) scale(1.25);
+
+    }
+
+    100%{
+
+        transform:translateX(-50%) scale(1);
+
+        opacity:1;
+
+    }
+
+}
+.petal{
+
+position:absolute;
+
+font-size:28px;
+
+opacity:.75;
+
+pointer-events:none;
+
+animation:petalFall linear infinite;
+
+}
+
+.p1{left:8%;animation-duration:13s;}
+.p2{left:23%;animation-duration:10s;}
+.p3{left:44%;animation-duration:15s;}
+.p4{left:61%;animation-duration:12s;}
+.p5{left:79%;animation-duration:11s;}
+.p6{left:92%;animation-duration:14s;}
+
+@keyframes petalFall{
+
+from{
+
+top:-10%;
+transform:rotate(0deg);
+
+}
+
+to{
+
+top:110%;
+transform:translateX(80px) rotate(360deg);
+
+}
+
+}
+.ringSparkle{
+
+position:absolute;
+
+font-size:22px;
+
+animation:twinkleRing 2s infinite;
+
+pointer-events:none;
+
+}
+
+.rs1{
+
+top:55px;
+left:23%;
+
+}
+
+.rs2{
+
+top:170px;
+right:25%;
+
+animation-delay:.7s;
+
+}
+
+.rs3{
+
+top:90px;
+left:72%;
+
+animation-delay:1.3s;
+
+}
+
+@keyframes twinkleRing{
+
+0%,100%{
+
+opacity:.2;
+transform:scale(.6);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(1.3);
+
+}
+
+}
+.butterfly{
+
+    position:absolute;
+
+    font-size:36px;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    animation:flyButterfly 6s linear forwards;
+
+}
+
+@keyframes flyButterfly{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        scale(.5)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    25%{
+
+        transform:
+        translate(250px,-120px)
+        rotate(20deg);
+
+    }
+
+    50%{
+
+        transform:
+        translate(500px,80px)
+        rotate(-15deg);
+
+    }
+
+    75%{
+
+        transform:
+        translate(850px,-180px)
+        rotate(25deg);
+
+    }
+
+    100%{
+
+        transform:
+        translate(1400px,-80px)
+        scale(1.2)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}

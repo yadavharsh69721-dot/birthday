@@ -1,0 +1,214 @@
+/* ==========================
+   PAGE 16
+========================== */
+
+#page16{
+
+    position:absolute;
+    inset:0;
+
+    overflow:hidden;
+
+    background:linear-gradient(180deg,#fff7fb,#ffeaf5,#fffdfd);
+
+}
+
+/* --------------------------
+   Scrapbook Background
+-------------------------- */
+
+#creditsBackground{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+.creditPic{
+
+    position:absolute;
+
+    width:190px;
+    height:240px;
+
+    object-fit:cover;
+
+    background:white;
+
+    padding:8px 8px 28px;
+
+    border-radius:8px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    opacity:.22;
+
+    filter:blur(1.2px);
+
+    animation:creditsFloat 10s ease-in-out infinite;
+
+}
+
+@keyframes creditsFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+.c1{left:1%;top:2%;transform:rotate(-9deg);}
+.c2{left:10%;top:8%;transform:rotate(8deg);}
+.c3{left:20%;top:3%;transform:rotate(-6deg);}
+.c4{left:30%;top:10%;transform:rotate(12deg);}
+.c5{left:40%;top:5%;transform:rotate(-8deg);}
+.c6{left:50%;top:2%;transform:rotate(6deg);}
+.c7{left:60%;top:8%;transform:rotate(-11deg);}
+.c8{left:70%;top:4%;transform:rotate(10deg);}
+.c9{left:80%;top:8%;transform:rotate(-7deg);}
+.c10{left:89%;top:3%;transform:rotate(8deg);}
+
+.c11{left:5%;top:28%;transform:rotate(10deg);}
+.c12{left:16%;top:33%;transform:rotate(-9deg);}
+.c13{left:28%;top:30%;transform:rotate(7deg);}
+.c14{left:39%;top:36%;transform:rotate(-12deg);}
+.c15{left:51%;top:28%;transform:rotate(8deg);}
+.c16{left:62%;top:34%;transform:rotate(-8deg);}
+.c17{left:74%;top:31%;transform:rotate(10deg);}
+.c18{left:86%;top:36%;transform:rotate(-9deg);}
+
+.c19{left:2%;top:60%;transform:rotate(-8deg);}
+.c20{left:14%;top:67%;transform:rotate(10deg);}
+.c21{left:26%;top:63%;transform:rotate(-7deg);}
+.c22{left:38%;top:69%;transform:rotate(9deg);}
+.c23{left:50%;top:61%;transform:rotate(-10deg);}
+.c24{left:62%;top:68%;transform:rotate(8deg);}
+.c25{left:74%;top:63%;transform:rotate(-11deg);}
+.c26{left:86%;top:69%;transform:rotate(10deg);}
+
+.c27{left:9%;top:84%;transform:rotate(7deg);}
+.c28{left:32%;top:86%;transform:rotate(-8deg);}
+.c29{left:55%;top:84%;transform:rotate(9deg);}
+.c30{left:73%;top:86%;transform:rotate(-7deg);}
+.c31{left:90%;top:84%;transform:rotate(11deg);}
+#creditsRoll{
+
+    position:absolute;
+
+    left:50%;
+
+    top:100%;
+
+    width:850px;
+
+    max-width:90%;
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    z-index:100;
+
+    animation:none;
+
+}
+
+@keyframes rollCredits{
+
+0%{
+
+    top:100%;
+    opacity:1;
+
+}
+
+100%{
+
+    top:-320%;
+    opacity:1;
+
+}
+
+}
+
+#creditsRoll h1{
+
+    font-size:60px;
+
+    color:#ff4f8b;
+
+    margin-bottom:30px;
+
+    text-shadow:0 0 20px rgba(255,255,255,.6);
+
+}
+
+#creditsRoll h2{
+
+    font-size:42px;
+
+    color:#ff5b9b;
+
+    margin:35px 0;
+
+}
+
+#creditsRoll h3{
+
+    font-size:36px;
+
+    color:#444;
+
+    line-height:1.8;
+
+}
+
+#creditsRoll p{
+
+    font-size:28px;
+
+    color:#444;
+
+    line-height:2;
+
+}
+#creditsCreator{
+
+width:280px;
+
+border-radius:25px;
+
+border:10px solid white;
+
+box-shadow:0 25px 50px rgba(0,0,0,.25);
+
+margin:40px auto;
+
+display:block;
+
+}
+#continuePage16{
+
+position:fixed;
+
+right:25px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+z-index:999999;
+
+}
